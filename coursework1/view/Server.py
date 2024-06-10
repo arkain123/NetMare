@@ -1,0 +1,56 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_Server(object):
+    def setupUi(self, Server):
+        Server.setObjectName("Server")
+        Server.resize(554, 300)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/IconPNG/Image/IcoPNG.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        Server.setWindowIcon(icon)
+        self.Port2Label = QtWidgets.QLabel(Server)
+        self.Port2Label.setGeometry(QtCore.QRect(10, 10, 41, 16))
+        self.Port2Label.setObjectName("Port2Label")
+        self.Port2Line = QtWidgets.QLineEdit(Server)
+        self.Port2Line.setGeometry(QtCore.QRect(50, 10, 61, 22))
+        self.Port2Line.setMaxLength(5)
+        self.Port2Line.setObjectName("Port2Line")
+        self.StartButton = QtWidgets.QPushButton(Server)
+        self.StartButton.setGeometry(QtCore.QRect(370, 10, 171, 28))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.StartButton.setFont(font)
+        self.StartButton.setObjectName("StartButton")
+        self.InfoTextBox = QtWidgets.QTextEdit(Server)
+        self.InfoTextBox.setGeometry(QtCore.QRect(10, 40, 531, 251))
+        self.InfoTextBox.setReadOnly(True)
+        self.InfoTextBox.setObjectName("InfoTextBox")
+        self.SaveButton = QtWidgets.QPushButton(Server)
+        self.SaveButton.setGeometry(QtCore.QRect(222, 10, 141, 28))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SaveButton.setFont(font)
+        self.SaveButton.setObjectName("SaveButton")
+        self.progressBar = QtWidgets.QProgressBar(Server)
+        self.progressBar.setGeometry(QtCore.QRect(120, 10, 61, 23))
+        self.progressBar.setMaximum(1)
+        self.progressBar.setProperty("value", 0)
+        self.progressBar.setFormat("")
+        self.progressBar.setObjectName("progressBar")
+
+        self.retranslateUi(Server)
+        QtCore.QMetaObject.connectSlotsByName(Server)
+
+    def retranslateUi(self, Server):
+        _translate = QtCore.QCoreApplication.translate
+        Server.setWindowTitle(_translate("Server", "Server"))
+        self.Port2Label.setText(_translate("Server", "Порт:"))
+        self.Port2Line.setInputMask(_translate("Server", "00000"))
+        self.Port2Line.setText(_translate("Server", "11208"))
+        self.StartButton.setText(_translate("Server", "Запустить сервер"))
+        self.SaveButton.setText(_translate("Server", "Сохранить лог"))
+import Resources.resource_rc

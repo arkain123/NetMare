@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="IconPNG">
+    <file>Image/IcoPNG.png</file>
+    <file>Image/pngwing.com.png</file>
+  </qresource>
+  <qresource prefix="Icon">
+    <file>Image/pngwing.com.ico</file>
+  </qresource>
+  <qresource prefix="IconICO">
+    <file>Image/pngwing.com.ico</file>
+  </qresource>
+  <qresource prefix="ServerICO">
+    <file>Image/pngwing.com(2).ico</file>
+  </qresource>
+  <qresource prefix="MyPhoto">
+    <file>Image/LiterallyMe.png</file>
+  </qresource>
+</RCC>
